@@ -1,5 +1,7 @@
 # Cape horn windvane plastic part replacements
 
+![cap](https://github.com/phaul/cape_horn_windvane_caps/blob/master/image.jpg?raw=true)
+
 Used material: white PETG
 3D printed on: Ender 3 PRo
 
