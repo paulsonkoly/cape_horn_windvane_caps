@@ -1,4 +1,4 @@
-// (C) Paul Sonkoly -2021
+// (C) Paul Sonkoly - 2021
 // Cape Horn Wind vane closing caps
 
 
