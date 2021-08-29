@@ -6,7 +6,7 @@
 // bottom diam - flush plate diameter
 
 // shaft diam - part that goes in the tube
-// shaft height - how deep it goes in the metal tube
+// height - height of the model including flush plate
 
 // cut hole in the middle 
 // hole_diam - if we cut hole.. diameter 
@@ -14,7 +14,7 @@
 module cap(bottom_thickness,
            bottom_diam,
            shaft_diam,
-           shaft_height,
+           height,
            cut_hole = false,
            hole_diam) {
 
@@ -36,12 +36,12 @@ module cap(bottom_thickness,
     
     module shaft() {   
         translate([0, 0, bottom_thickness / 2])
-          cylinder(h=shaft_height, d = shaft_diam);
+          cylinder(h=height - bottom_thickness, d = shaft_diam);
     }
     
     module mid_hole() {
         translate([0, 0, - bottom_thickness / 2])
-          cylinder(d = hole_diam, h = shaft_height + bottom_thickness);
+          cylinder(d = hole_diam, h = height);
     }
 
     translate([0, 0, bottom_thickness / 2]) {
@@ -61,12 +61,3 @@ module cap(bottom_thickness,
         }      
   }
 }
-
-
-/*cap(bottom_thickness = 3.2,
-    bottom_diam = 34.75,
-    shaft_diam = 31.66,
-    shaft_height = 13.66,
-    cut_hole = true,
-    hole_diam = 3
-);*/
